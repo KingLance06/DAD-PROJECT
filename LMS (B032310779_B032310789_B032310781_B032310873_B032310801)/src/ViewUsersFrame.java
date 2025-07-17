@@ -105,5 +105,3 @@ public class ViewUsersFrame extends JFrame {
         SwingUtilities.invokeLater(ViewUsersFrame::new);
     }
 }
-hello
-    
