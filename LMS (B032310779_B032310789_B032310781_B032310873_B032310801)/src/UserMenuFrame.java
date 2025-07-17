@@ -7,6 +7,7 @@ import org.json.*;
 public class UserMenuFrame extends JFrame {
 
     public UserMenuFrame() {
+        
         setTitle("📚 User Menu - Library System");
         setSize(420, 330);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
