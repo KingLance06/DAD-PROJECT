@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 public class AdminMenuFrame extends JFrame {
 
     public AdminMenuFrame() {
+        
         setTitle("📚 Library Management System - Admin Menu");
         setSize(400, 420);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
