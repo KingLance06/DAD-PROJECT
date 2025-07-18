@@ -64,13 +64,13 @@ The Library Management System is a Java Swing-based desktop application built us
 
 # Security
 1. Current Security:
-i. Role-based access control (Admin/User separation)
-ii. Plain password storage (To be improved)
+- **Role-based access control (Admin/User separation)**
+- **Plain password storage (To be improved)**
 
 2. Recommended Improvements:
-i. Use password_hash() in PHP for password security
-ii. Implement JWT tokens for session handling
-iii. OAuth 2.0 support for third-party authentication in future versions
+- **Use password_hash() in PHP for password security**
+- **Implement JWT tokens for session handling**
+- **OAuth 2.0 support for third-party authentication in future versions**
 
 # Entity-Relationship Diagram (ERD)
 ![Entity-Relationship Diagram (ERD)](entity-relationship-diagram.png)
