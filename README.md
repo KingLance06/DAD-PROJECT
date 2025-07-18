@@ -62,6 +62,46 @@ The Library Management System is a Java Swing-based desktop application built us
 | /borrow_book | POST  | 	Borrow a book |
 | /return_book  | POST  | Return a borrowed book  |
 
+# Request & Response Examples
+# Register User
+- **Request**
+{
+  "username": "Roy",
+  "password": "password123",
+  "role": "user"
+}
+
+- **Success Response**
+{
+  "status": "success",
+  "message": "User registered successfully"
+}
+
+- **Error Response**
+{
+  "status": "error",
+  "message": "Username already exists"
+}
+
+- **Borrow Book**
+- **Request**
+{
+  "user_id": 5,
+  "book_id": 12
+}
+
+- **Success Response**
+{
+  "status": "success",
+  "message": "Book borrowed successfully"
+}
+
+- **Error Response**
+{
+  "status": "error",
+  "message": "Book is not available"
+}
+
 # Security
 1. Current Security:
 - **Role-based access control (Admin/User separation)**
@@ -72,7 +112,36 @@ The Library Management System is a Java Swing-based desktop application built us
 - **Implement JWT tokens for session handling**
 - **OAuth 2.0 support for third-party authentication in future versions**
 
+# Frontend Applications
+# Admin App
+**Purpose:**
+ - Manage books and users. Admins can add/remove books and view registered users.
+
+**Technology Stack:**
+ - Java Swing (GUI)
+ - Apache HttpClient (HTTP requests)
+ - Eclipse IDE (Development Environment)
+
+**API Integration:**
+ - Sends HTTP POST/GET requests to the PHP backend via DatabaseConnection.java.
+
+**User App**
+**Purpose:**
+ - Allow users to register, log in, view available books, borrow books, and return books.
+
+**Technology Stack:**
+ - Java Swing (GUI)
+ - Apache HttpClient (HTTP requests)
+ - Eclipse IDE (Development Environment)
+
+**API Integration:**
+ - Uses the same PHP API endpoints for user-related operations.
+
+
 # Entity-Relationship Diagram (ERD)
+**MySQL**
+ - LMS uses MySQL as its relational database system. The SQL file library_db.sql contains all table creation statements and sample data.
+
 ![Entity-Relationship Diagram (ERD)](entity-relationship-diagram.png)
 - **USERS TABLE**
   Stores user credentials and roles.
@@ -98,3 +167,38 @@ The Library Management System is a Java Swing-based desktop application built us
     - adds: Admins can add new books
     - deletes: Admins can remove books
     - views: Admins can view all user activity
+
+# Business Logic and Data Validation
+**Use Case Flows**
+**Borrow a Book**
+    - User selects a book → System checks availability → 
+    - If available → Create borrow record → Update book status → Notify success
+    - Else → Notify book is unavailable
+
+**Borrow a Book**
+    - User selects return → System checks borrow record →
+    - If valid → Update borrow record with return date → Update book status → Notify success
+    - Else → Notify invalid operation
+
+**Admin Adds a Book**
+    - Admin inputs book details → System validates fields → 
+    - Insert book into database → Notify success
+
+**Data Validation**
+| Layer  | Validation |
+| ------------- | ------------- |
+| Frontend  | Non-empty fields, correct data types |
+| Backend  | SQL injection prevention, role checks, duplicate username check  |
+
+
+**Project Setup**
+**Frontend (Java Swing via Eclipse)**
+ - Open the project in Eclipse IDE.
+ - Configure API URLs in DatabaseConnection.java.
+ - Run Main.java.
+
+**Backend (PHP API)**
+ - Place the PHP files in htdocs/LibraryManagementSystem/ using XAMPP.
+ - Import library_db.sql into MySQL using phpMyAdmin or CLI.
+ - Access APIs via http://localhost/LibraryManagementSystem/.
+
