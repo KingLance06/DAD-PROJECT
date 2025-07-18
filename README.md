@@ -170,15 +170,26 @@ The Library Management System is a Java Swing-based desktop application built us
 
 # Business Logic and Data Validation
 **Use Case Flows**
+
+![Borrow a Book](borrow-book.jpg)
+
 **Borrow a Book**
     - User selects a book → System checks availability → 
     - If available → Create borrow record → Update book status → Notify success
     - Else → Notify book is unavailable
 
-**Borrow a Book**
+
+
+![Return a Book](return-book.jpg)
+
+**Return a Book**
     - User selects return → System checks borrow record →
     - If valid → Update borrow record with return date → Update book status → Notify success
     - Else → Notify invalid operation
+
+
+
+![Admin Adds a Book](add-book.jpg)
 
 **Admin Adds a Book**
     - Admin inputs book details → System validates fields → 
