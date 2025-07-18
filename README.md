@@ -123,7 +123,12 @@ The Library Management System is a Java Swing-based desktop application built us
  - Eclipse IDE (Development Environment)
 
 **API Integration:**
- - Sends HTTP POST/GET requests to the PHP backend via DatabaseConnection.java.
+
+| Functionn | Endpoint  | Method | Payload Example | 
+| ------------- | ------------- |------------- |------------- |
+| Add Book | /api/add_book.php  | POST   | { "title": "Book Title", "author": "Author", "year": 2025 }  |
+| Remove Book | /api/delete_book.php  | POST  | { "book_id": 5 }  |
+| View Users | /api/get_users.php | GET   | None |
 
 **User App**
 **Purpose:**
@@ -135,20 +140,12 @@ The Library Management System is a Java Swing-based desktop application built us
  - Eclipse IDE (Development Environment)
 
 **API Integration:**
- - Uses the same PHP API endpoints for user-related operations.
 
-
-# User App
-**Purpose:**
- - Allow users to register, log in, view available books, borrow books, and return books.
-
-**Technology Stack:**
- - Java Swing (GUI)
- - Apache HttpClient (HTTP requests)
- - Eclipse IDE (Development Environment)
-
-**API Integration:**
- - Uses the same PHP API endpoints for user-related operations.
+| Function | Endpoint  | Method | Payload Example | 
+| ------------- | ------------- |------------- |------------- |
+| View Books  | /api/get_books.php    | GET  | None  |
+| Borrow Book | /api/borrow_book.php  | POST  | { "user_id": 1, "book_id": 3 }  |
+| Return Book | /api/return_book.php  | POST  | { "user_id": 1, "book_id": 3 } |
 
 
 # Entity-Relationship Diagram (ERD)
