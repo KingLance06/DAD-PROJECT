@@ -130,8 +130,7 @@ The Library Management System is a Java Swing-based desktop application built us
 | Remove Book | /api/delete_book.php  | POST  | { "book_id": 5 }  |
 | View Users | /api/get_users.php | GET   | None |
 
-**User App**
-
+# User App
 **Purpose:**
  - Allow users to register, log in, view available books, borrow books, and return books.
 
