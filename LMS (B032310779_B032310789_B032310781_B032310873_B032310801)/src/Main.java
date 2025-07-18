@@ -17,7 +17,7 @@ public class Main extends JFrame {
         setupComponents(panel);
         setVisible(true);
     }
-
+        //components Setup
     private void setupComponents(JPanel panel) {
         Font titleFont = new Font("Segoe UI", Font.BOLD, 20);
         Font buttonFont = new Font("Segoe UI", Font.BOLD, 14);
