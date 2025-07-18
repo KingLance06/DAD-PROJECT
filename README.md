@@ -55,3 +55,27 @@ Password hashing using PHP password_hash().
 
 # Entity-Relationship Diagram (ERD)
 ![Entity-Relationship Diagram (ERD)](entity-relationship-diagram.png)
+- **USERS TABLE**
+  Stores user credentials and roles.
+  - id: Primary Key
+  - username: Unique identifier for each user
+  - password: Encrypted password
+  - role: Defines whether the user is an admin or a regular user
+ 
+- **BOOKS TABLE**
+  Manages book information and borrowing details.
+  - id: Primary Key
+  - title, author, year: Descriptive book details
+  - available: Boolean (1 = available, 0 = borrowed)
+  - borrow_date: Date when the book was borrowed
+  - return_date: Date when the book was returned
+ 
+- **RELATIONSHIP BY ROLES**
+  - **🔒 Users (role = user):**
+    - borrows: Users can borrow books
+    - views: Users can view available books
+
+  - **🛠️ Admins (role = admin):**
+    - adds: Admins can add new books
+    - deletes: Admins can remove books
+    - views: Admins can view all user activity
