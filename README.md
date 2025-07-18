@@ -52,3 +52,6 @@ For future enhancements, consider:
 JWT (JSON Web Tokens) for stateless API security.
 OAuth 2.0 for third-party authentication.
 Password hashing using PHP password_hash().
+
+# Entity-Relationship Diagram (ERD)
+![Entity-Relationship Diagram (ERD)](entity-relationship-diagram.png)
