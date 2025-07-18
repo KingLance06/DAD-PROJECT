@@ -46,12 +46,31 @@ The Library Management System is a Java Swing-based desktop application built us
 | Database| MySQL (library_db.sql)  |
 | Communication  | RESTful API (HTTP, JSON)  |
 
+# API Documentation
+# List of Endpoints
+
+| Endpoint  | Method | Description |
+| ------------- | ------------- |------------- |
+| /register  | POST  | Register a new user  |
+| /login  | POST  | Login existing user  |
+| /add_book | POST  | Add new book (Admin only) |
+| /delete_book  | POST | Delete a book (Admin only) |
+| /get_books  | GET | Retrieve all books  |
+| /get_book_titles  | GET  | Retrieve all book titles  |
+| /get_book_info | POST | Retrieve one book's details  |
+| /get_users | RESTful API (HTTP, JSON)  | View all users (Admin)  |
+| /borrow_book | POST  | 	Borrow a book |
+| /return_book  | POST  | Return a borrowed book  |
+
 # Security
-Currently uses simple role-based access control (RBAC) at frontend level.
-For future enhancements, consider:
-JWT (JSON Web Tokens) for stateless API security.
-OAuth 2.0 for third-party authentication.
-Password hashing using PHP password_hash().
+1. Current Security:
+i. Role-based access control (Admin/User separation)
+ii. Plain password storage (To be improved)
+
+2. Recommended Improvements:
+i. Use password_hash() in PHP for password security
+ii. Implement JWT tokens for session handling
+iii. OAuth 2.0 support for third-party authentication in future versions
 
 # Entity-Relationship Diagram (ERD)
 ![Entity-Relationship Diagram (ERD)](entity-relationship-diagram.png)
