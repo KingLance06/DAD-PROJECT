@@ -138,6 +138,19 @@ The Library Management System is a Java Swing-based desktop application built us
  - Uses the same PHP API endpoints for user-related operations.
 
 
+# User App
+**Purpose:**
+ - Allow users to register, log in, view available books, borrow books, and return books.
+
+**Technology Stack:**
+ - Java Swing (GUI)
+ - Apache HttpClient (HTTP requests)
+ - Eclipse IDE (Development Environment)
+
+**API Integration:**
+ - Uses the same PHP API endpoints for user-related operations.
+
+
 # Entity-Relationship Diagram (ERD)
 **MySQL**
  - LMS uses MySQL as its relational database system. The SQL file library_db.sql contains all table creation statements and sample data.
