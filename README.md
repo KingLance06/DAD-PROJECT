@@ -13,6 +13,8 @@ LIBRARY MANAGEMENT SYSTEM
 The Library Management System (LMS) is a Java-based desktop application that streamlines the management of library operations such as book cataloging, user registration, and borrowing processes. It provides a structured solution to replace traditional manual systems, reducing errors, saving time, and improving record-keeping efficiency. The system supports two main user roles: administrators, who can add or remove books and view the list of registered users, and regular users, who can register, log in, and browse the book collection. Designed for small to medium-sized libraries, academic institutions, or community reading centers, this project offers an intuitive interface and serves as a foundation for potential future enhancements like online book reservations, overdue fine tracking, or integration with external APIs for book data.
 
 # System Architecture
+![System Architecture]([https://example.com/image.png](https://github.com/KingLance06/DAD-PROJECT/blob/main/System%20Architecture.png))
+
 The Library Management System is a Java Swing-based desktop application built using a layered architecture that separates the presentation (UI), business logic, and data access layers. The application supports two main user roles: Admin and User.
 
 - **Presentation Layer:**
